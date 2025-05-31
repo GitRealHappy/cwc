@@ -1,0 +1,36 @@
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>{{ site.company_name }}</h4>
+            <p>{{ site.address }}</p>
+            <p>Phone: <a href="tel:{{ site.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}">{{ site.phone }}</a></p>
+            <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="{{ '/home' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                <li><a href="{{ '/references' | relative_url }}">References</a></li>
+                <li><a href="{{ '/portfolio' | relative_url }}">Portfolio</a></li>
+                <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Specializations</h4>
+            <ul class="footer-links">
+                <li>Healthcare Facilities</li>
+                <li>Gaming & Hospitality</li>
+                <li>Sports & Fitness Centers</li>
+                <li>Senior Living Communities</li>
+                <li>Commercial Offices</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 CWC Architectural Millwork. All rights reserved.</p>
+    </div>
+</footer> 

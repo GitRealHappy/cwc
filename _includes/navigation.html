@@ -16,9 +16,8 @@
     <ul class="nav-menu">
         <li><a href="{{ '/home' | relative_url }}" {% if page.url == '/home/' or page.url == '/home/index.html' %}class="active"{% endif %}>Home</a></li>
         <li><a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}>About</a></li>
-        <li><a href="{{ '/services' | relative_url }}" {% if page.url contains '/services' %}class="active"{% endif %}>Services</a></li>
+        <li><a href="{{ '/references' | relative_url }}" {% if page.url contains '/references' %}class="active"{% endif %}>References</a></li>
         <li><a href="{{ '/portfolio' | relative_url }}" {% if page.url contains '/portfolio' %}class="active"{% endif %}>Portfolio</a></li>
-        <li><a href="{{ '/gallery' | relative_url }}" {% if page.url contains '/gallery' %}class="active"{% endif %}>Gallery</a></li>
         <li><a href="{{ '/contact' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>Contact</a></li>
     </ul>
 

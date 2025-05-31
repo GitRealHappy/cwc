@@ -11,6 +11,12 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% if page.url == "/" %}
+    <link rel="stylesheet" href="{{ '/assets/css/landing.css' | relative_url }}">
+    {% endif %}
+    {% if page.url == "/portfolio/" %}
+    <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+    {% endif %}
     {% if page.custom_css %}
         {% for css_file in page.custom_css %}
         <link rel="stylesheet" href="{{ '/assets/css/' | append: css_file | append: '.css' | relative_url }}">
@@ -31,9 +37,19 @@
         <div class="content-rectangle">
             {{ content }}
         </div>
+        
+        {% unless page.hide_footer %}
+            {% include footer.html %}
+        {% endunless %}
     </main>
 
     <!-- Scripts -->
+    {% if page.url == "/" %}
+    <script src="{{ '/assets/js/landing.js' | relative_url }}"></script>
+    {% endif %}
+    {% if page.url == "/portfolio/" %}
+    <script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+    {% endif %}
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     {% if page.custom_js %}
         {% for js_file in page.custom_js %}

@@ -5,9 +5,31 @@ url: "" # Update with your domain when deployed
 baseurl: "" # Update if deploying to a subdirectory
 
 # Contact information
-phone: "(123) 456-7890"
-email: "info@cwcmillwork.com"
-address: "123 Main Street, Your City, State 12345"
+phone: "1-866-525-6868"
+email: "info@cwcmillwork.ca"
+address: "18 - 34378 Manufacturers Way, Abbotsford, BC V2S 7M1"
+
+# Company details
+company_name: "CWC Architectural Millwork 2007 Inc."
+year_established: "2007"
+
+# Key Personnel
+personnel:
+  - name: "Ted Bostrom"
+    title: "President & General Manager"
+    email: "ted@cwcmillwork.ca"
+  - name: "Pauline Bostrom"
+    title: "Comptroller"
+    email: "pauline@cwcmillwork.ca"
+  - name: "John Beauchamp"
+    title: "Production Manager"
+    email: "john@cwcmillwork.ca"
+  - name: "Karl Reisinger"
+    title: "Project Manager"
+    email: "karl@cwcmillwork.ca"
+  - name: "Cole Bostrom"
+    title: "Estimating"
+    email: "cole@cwcmillwork.ca"
 
 # Social media (add your handles)
 # facebook: "cwcmillwork"
@@ -21,9 +43,6 @@ permalink: pretty
 
 # Collections
 collections:
-  services:
-    output: true
-    permalink: /services/:name/
   portfolio:
     output: true
     permalink: /portfolio/:name/
@@ -35,11 +54,6 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-  - scope:
-      path: ""
-      type: "services"
-    values:
-      layout: "service"
   - scope:
       path: ""
       type: "portfolio"

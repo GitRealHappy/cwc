@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Contact Us"
-description: "Get in touch with CWC Architectural Millwork for your custom millwork project. Call, email, or visit our showroom."
+description: "Get in touch with CWC Architectural Millwork for your custom millwork project. Call, email, or visit our facility in Abbotsford, BC."
 ---
 
 <section class="hero-section">
@@ -41,6 +41,21 @@ description: "Get in touch with CWC Architectural Millwork for your custom millw
     </div>
 </section>
 
+<section class="team-section">
+    <h2>Our Team</h2>
+    <p class="section-intro">Connect directly with our experienced team members for your specific needs.</p>
+    
+    <div class="team-grid">
+        {% for person in site.personnel %}
+        <div class="team-member">
+            <h3>{{ person.name }}</h3>
+            <p class="title">{{ person.title }}</p>
+            <p class="email"><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
 <section class="contact-form">
     <div class="form-container">
         <h2>Request a Quote</h2>
@@ -67,6 +82,10 @@ description: "Get in touch with CWC Architectural Millwork for your custom millw
                         <option value="cabinetry">Custom Cabinetry</option>
                         <option value="trim">Architectural Trim</option>
                         <option value="doors">Custom Doors</option>
+                        <option value="millwork">Custom Millwork</option>
+                        <option value="healthcare">Healthcare Facilities</option>
+                        <option value="hospitality">Gaming/Hospitality</option>
+                        <option value="commercial">Commercial Offices</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
