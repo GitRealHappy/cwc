@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    
+    <!-- SEO -->
+    {% seo %}
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ '/assets/css/landing.css' | relative_url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="video-container">
+            <video id="intro-video" autoplay muted loop playsinline>
+                <source src="{{ '/assets/videos/introvideo.mov' | relative_url }}" type="video/quicktime">
+                <source src="{{ '/assets/videos/intro.mp4' | relative_url }}" type="video/mp4">
+                <source src="{{ '/assets/videos/intro.webm' | relative_url }}" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <div class="content-overlay">
+            <div class="logo-container">
+                <img src="{{ '/assets/images/logo.gif' | relative_url }}" alt="{{ site.title }}" class="logo">
+            </div>
+            
+            <button class="enter-site-btn" onclick="enterSite()">
+                <span>{{ page.button_text | default: "Enter Site" }}</span>
+                <div class="btn-overlay"></div>
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ '/assets/js/landing.js' | relative_url }}"></script>
+</body>
+</html> 

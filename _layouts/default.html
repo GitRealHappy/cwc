@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    
+    <!-- SEO -->
+    {% seo %}
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% if page.custom_css %}
+        {% for css_file in page.custom_css %}
+        <link rel="stylesheet" href="{{ '/assets/css/' | append: css_file | append: '.css' | relative_url }}">
+        {% endfor %}
+    {% endif %}
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+</head>
+<body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
+    
+    {% unless page.hide_navigation %}
+        {% include navigation.html %}
+    {% endunless %}
+    
+    <!-- Main Content Area -->
+    <main class="main-content{% if page.hide_navigation %} full-width{% endif %}">
+        <div class="content-rectangle">
+            {{ content }}
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    {% if page.custom_js %}
+        {% for js_file in page.custom_js %}
+        <script src="{{ '/assets/js/' | append: js_file | append: '.js' | relative_url }}"></script>
+        {% endfor %}
+    {% endif %}
+</body>
+</html> 

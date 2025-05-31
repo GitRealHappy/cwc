@@ -1,0 +1,65 @@
+# Site settings
+title: "CWC Architectural Millwork"
+description: "Custom millwork solutions that transform spaces with precision craftsmanship and innovative design."
+url: "" # Update with your domain when deployed
+baseurl: "" # Update if deploying to a subdirectory
+
+# Contact information
+phone: "(123) 456-7890"
+email: "info@cwcmillwork.com"
+address: "123 Main Street, Your City, State 12345"
+
+# Social media (add your handles)
+# facebook: "cwcmillwork"
+# instagram: "cwcmillwork"
+# linkedin: "company/cwc-millwork"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /services/:name/
+  portfolio:
+    output: true
+    permalink: /portfolio/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: "portfolio-item"
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+author: "CWC Architectural Millwork"
+twitter:
+  username: "cwcmillwork" # Update with actual handle
+logo: "/assets/images/logo.gif" 
